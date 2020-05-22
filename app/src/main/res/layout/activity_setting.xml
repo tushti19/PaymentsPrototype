@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Setting">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/setting_scrollview">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="30dp"
+            android:gravity="left">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:id="@+id/settings">
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/back"
+                    android:layout_marginTop="40dp"
+                    android:background="@drawable/arrow_left_black"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="35dp"
+                    android:layout_toRightOf="@id/back"
+                    android:layout_marginTop="30dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="Settings"
+                    android:textColor="#000000"
+                    android:textSize="26dp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:id="@+id/profile">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/user_photo"
+                    android:layout_marginTop="20dp"
+                    android:src="@drawable/user"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="26dp"
+                    android:layout_toRightOf="@id/user_photo"
+                    android:text="Rahul Sharma"
+                    android:textStyle="bold"
+                    android:textSize="24dp"
+                    android:textColor="@color/colorPrimary"
+                    android:fontFamily="@font/poppins_semibold"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:id="@+id/darkmode">
+
+                <ImageView
+                    android:id="@+id/darkmode_icon"
+                    android:layout_width="41dp"
+                    android:layout_height="41dp"
+                    android:layout_marginTop="20dp"
+                    android:src="@drawable/dark_mode_icon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="26dp"
+                    android:layout_toRightOf="@id/darkmode_icon"
+                    android:text="Dark Mode"
+                    android:textSize="20dp"
+                    android:textColor="#5D5D5D"
+                    android:fontFamily="@font/poppins_semibold"/>
+                <ImageView
+                    android:id="@+id/togglenight"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/off"
+                    android:layout_marginTop="20dp"/>
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="88dp"
+                android:layout_height="29dp"
+                android:layout_marginTop="20dp"
+                android:text="Account"
+                android:textColor="#9E9E9E"
+                android:textSize="21dp"
+                android:layout_marginLeft="20dp"
+                android:textStyle="bold"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:id="@+id/editprofile">
+                <ImageView
+                    android:layout_width="42dp"
+                    android:layout_height="42dp"
+                    android:id="@+id/editprofile_icon"
+                    android:layout_marginTop="20dp"
+                    android:src="@drawable/edit_profile_icon"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="23dp"
+                    android:layout_marginTop="26dp"
+                    android:layout_toRightOf="@id/editprofile_icon"
+                    android:text="Edit Profile"
+                    android:textSize="20dp"
+                    android:textColor="#5D5D5D"
+                    android:fontFamily="@font/poppins_semibold"/>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="50dp"
+                    android:src="@drawable/icon_arrowleft"
+                    android:layout_marginTop="34dp"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:id="@+id/changepass">
+                <ImageView
+                    android:layout_width="42dp"
+                    android:layout_height="42dp"
+                    android:id="@+id/changepass_icon"
+                    android:layout_marginTop="20dp"
+                    android:src="@drawable/change_password_icon"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="23dp"
+                    android:layout_marginTop="26dp"
+                    android:layout_toRightOf="@id/changepass_icon"
+                    android:text="Change Password"
+                    android:textSize="20dp"
+                    android:textColor="#5D5D5D"
+                    android:fontFamily="@font/poppins_semibold"/>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="50dp"
+                    android:src="@drawable/icon_arrowleft"
+                    android:layout_marginTop="34dp"/>
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="29dp"
+                android:layout_marginTop="20dp"
+                android:text="Other"
+                android:textColor="#9E9E9E"
+                android:textSize="21dp"
+                android:layout_marginLeft="20dp"
+                android:textStyle="bold"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:id="@+id/notifications">
+                <ImageView
+                    android:layout_width="41dp"
+                    android:layout_height="41dp"
+                    android:id="@+id/notifications_icon"
+                    android:layout_marginTop="20dp"
+                    android:src="@drawable/notifications_icon"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="22dp"
+                    android:layout_marginTop="26dp"
+                    android:layout_toRightOf="@id/notifications_icon"
+                    android:text="Notifications"
+                    android:textSize="20dp"
+                    android:textColor="#5D5D5D"
+                    android:fontFamily="@font/poppins_semibold"/>
+                <ImageView
+                    android:id="@+id/togglenot"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="30dp"
+                    android:src="@drawable/off"
+                    android:layout_marginTop="20dp"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:id="@+id/logout">
+                <ImageView
+                    android:layout_width="41dp"
+                    android:layout_height="41dp"
+                    android:id="@+id/logout_icon"
+                    android:layout_marginTop="20dp"
+                    android:src="@drawable/logout_icon"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="26dp"
+                    android:layout_toRightOf="@id/logout_icon"
+                    android:text="Logout"
+                    android:textSize="20dp"
+                    android:textColor="#5D5D5D"
+                    android:fontFamily="@font/poppins_semibold"/>
+
+            </RelativeLayout>
+
+
+
+
+
+
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
+
+</RelativeLayout>

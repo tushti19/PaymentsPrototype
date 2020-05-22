@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PaymentSelected">
+
+    <RelativeLayout
+        android:layout_width="290dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/slideview_layout"
+        android:layout_marginBottom="20dp">
+
+        <ng.max.slideview.SlideView
+            android:id="@+id/slideView"
+            android:layout_width="290dp"
+            android:layout_height="60dp"
+            app:sv_animateSlideText="true"
+            app:sv_reverseSlide="false"
+            android:textAlignment="center"
+            app:sv_buttonBackgroundColor="@android:color/transparent"
+            app:sv_buttonImage="@drawable/slideview_button"
+            app:sv_slideBackgroundColor="@android:color/transparent"
+            app:sv_slideTextColor="#FFF"
+            />
+    </RelativeLayout>
+
+
+</RelativeLayout>

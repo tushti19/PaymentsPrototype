@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LiveOrders">
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="121dp"
+        android:elevation="10dp"
+        android:background="@drawable/live_orders"
+        android:id="@+id/upperLyout">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/live_orders_text"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/menu"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="36dp"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_info_outline"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="36dp"/>
+
+    </RelativeLayout>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/upperLyout"
+        android:divider="@android:color/transparent"
+        android:layout_marginBottom="20dp"
+        android:id="@+id/listview"/>
+
+
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:elevation="50dp"
+        android:id="@+id/layout"
+        android:background="@drawable/white_feedback_bg"
+        android:layout_alignParentBottom="true">
+        <ImageView
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="40dp"
+            android:src="@drawable/cancel"
+            android:id="@+id/cancel"
+            android:layout_marginTop="22dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="45dp"
+            android:gravity="center"
+            android:fontFamily="@font/poppins_semibold"
+            android:textColor="#000000"
+            android:visibility="gone"
+            android:id="@+id/lovedittext"
+            android:textSize="14dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="45dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:textColor="#000000"
+            android:visibility="gone"
+            android:id="@+id/greattext"
+            android:textSize="14dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="45dp"
+            android:visibility="gone"
+            android:id="@+id/averagetext"
+            android:fontFamily="@font/poppins_semibold"
+            android:textColor="#000000"
+            android:textSize="14dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="45dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:textColor="#000000"
+            android:visibility="gone"
+            android:id="@+id/badtext"
+            android:textSize="14dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:id="@+id/fucktext"
+            android:visibility="gone"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="45dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:textColor="#000000"
+            android:textSize="14dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rate your experience with"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="29dp"
+            android:id="@+id/rate_your_exp"
+            android:fontFamily="@font/poppins_semibold"
+            android:textColor="#000000"
+            android:textSize="17dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mit Print Shop"
+            android:id="@+id/shopName"
+            android:elevation="10dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/rate_your_exp"
+            android:layout_marginTop="5dp"
+            android:textStyle="bold"
+            android:fontFamily="@font/poppins_semibold"
+            android:textColor="#227093"
+            android:textSize="20dp"/>
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/fuck_small"
+            android:layout_marginTop="119dp"
+            android:id="@+id/fucksmall"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="33dp"/>
+        <ImageView
+            android:layout_width="74dp"
+            android:layout_height="74dp"
+            android:src="@drawable/fuck_big"
+            android:layout_marginTop="112dp"
+            android:id="@+id/fuckbig"
+            android:visibility="gone"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="20dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_semibold"
+            android:textSize="16dp"
+            android:text="F*#K!"
+            android:id="@+id/fuck"
+            android:layout_marginTop="175dp"
+            android:textColor="#227093"
+            android:visibility="gone"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="40dp"/>
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/bad_small"
+            android:layout_marginTop="119dp"
+            android:id="@+id/badsmall"
+            android:layout_toLeftOf="@id/averagesmall"
+            android:layout_toRightOf="@id/fucksmall"/>
+        <ImageView
+            android:layout_width="74dp"
+            android:layout_height="74dp"
+            android:src="@drawable/bad_big"
+            android:layout_marginTop="112dp"
+            android:id="@+id/badbig"
+            android:visibility="gone"
+            android:layout_toRightOf="@id/fucksmall"
+            android:layout_toLeftOf="@id/averagesmall"
+            />
+
+        <TextView
+            android:id="@+id/bad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/averagesmall"
+            android:layout_toRightOf="@id/fucksmall"
+            android:layout_marginTop="175dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="BAD!"
+            android:visibility="gone"
+            android:gravity="center"
+            android:textColor="#227093"
+            android:textSize="16dp" />
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/average_small"
+            android:id="@+id/averagesmall"
+            android:layout_marginTop="119dp"
+            android:layout_centerHorizontal="true"/>
+        <ImageView
+            android:layout_width="74dp"
+            android:layout_height="74dp"
+            android:src="@drawable/average_big"
+            android:layout_marginTop="112dp"
+            android:id="@+id/averagebig"
+            android:visibility="gone"
+            android:layout_centerHorizontal="true"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_semibold"
+            android:textSize="15dp"
+            android:text="AVERAGE!"
+            android:id="@+id/average"
+            android:layout_marginTop="175dp"
+            android:textColor="#227093"
+            android:visibility="gone"
+            android:layout_centerHorizontal="true"/>
+
+        <ImageView
+            android:id="@+id/greatsmall"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_toLeftOf="@id/loveditsmall"
+            android:layout_toRightOf="@id/averagesmall"
+            android:layout_marginTop="119dp"
+            android:src="@drawable/great_small" />
+        <ImageView
+            android:layout_width="74dp"
+            android:layout_height="74dp"
+            android:src="@drawable/great_big"
+            android:layout_marginTop="112dp"
+            android:id="@+id/greatbig"
+            android:visibility="gone"
+            android:layout_toLeftOf="@id/loveditsmall"
+            android:layout_toRightOf="@id/averagesmall"/>
+
+        <TextView
+            android:id="@+id/great"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="175dp"
+            android:layout_toRightOf="@id/averagesmall"
+            android:layout_toLeftOf="@id/loveditsmall"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="GREAT!"
+            android:gravity="center"
+            android:visibility="gone"
+            android:textColor="#227093"
+            android:textSize="16dp" />
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/loveditsmall"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="33dp"
+            android:layout_marginTop="119dp"
+            android:src="@drawable/lovedit_small" />
+        <ImageView
+            android:layout_width="74dp"
+            android:layout_height="74dp"
+            android:src="@drawable/lovedit_big"
+            android:layout_marginTop="112dp"
+            android:id="@+id/loveditbig"
+            android:visibility="gone"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_semibold"
+            android:textSize="16dp"
+            android:text="LOVED IT!"
+            android:layout_marginTop="175dp"
+            android:textColor="#227093"
+            android:id="@+id/lovedit"
+            android:visibility="gone"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"/>
+        <EditText
+            android:layout_width="315dp"
+            android:layout_height="122dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/edit_layout"
+            android:layout_marginTop="207dp"
+            android:textSize="11dp"
+            android:id="@+id/feedbacktext"
+            android:paddingLeft="20dp"
+            android:paddingTop="10dp"
+            android:gravity="top"
+            android:fontFamily="@font/poppins_semibold"
+            android:hint="Tell us what can we improve..... (Optional)"
+            />
+        <Button
+            android:layout_width="97dp"
+            android:layout_height="34dp"
+            android:background="@drawable/blue_button"
+            android:text="Submit"
+            android:textColor="#FFFFFF"
+            android:textSize="13dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="352dp"/>
+
+
+    </RelativeLayout>
+
+
+
+
+
+
+</RelativeLayout>

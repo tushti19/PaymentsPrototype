@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PaymentsActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="172dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="0dp"
+            android:elevation="10dp"
+            android:background="@drawable/payments_upper_blue_layout">
+
+            <ImageView
+                android:id="@+id/imageView8"
+                android:layout_width="142dp"
+                android:layout_height="28dp"
+                android:layout_marginTop="58dp"
+                android:layout_marginLeft="75dp"
+                app:srcCompat="@drawable/totalamount_text" />
+
+            <TextView
+                android:id="@+id/amount"
+                android:layout_width="64dp"
+                android:layout_height="35dp"
+                android:text=""
+                android:background="@drawable/price"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:layout_marginTop="106dp"
+                android:textColor="#FFFFFF"
+                android:layout_marginLeft="104dp" />
+
+            <ImageView
+                android:id="@+id/rupee_symbol"
+                android:layout_width="21dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="114dp"
+                android:layout_marginLeft="75dp"
+                android:src="@drawable/rupee_symbol" />
+
+            <ImageButton
+                android:id="@+id/paymentBackBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="61dp"
+                android:layout_marginLeft="23dp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/icon_arrow_left"/>
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/view">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <RelativeLayout
+
+                    android:layout_width="350dp"
+                    android:layout_height="87dp"
+                    android:elevation="5dp"
+                    android:id="@+id/pickup"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/white_bg_layout">
+
+                    <ImageView
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:src="@drawable/wallet_image"
+                        android:layout_centerVertical="true"
+                        android:id="@+id/wallet_image"
+                        android:layout_marginLeft="29dp"/>
+
+                    <TextView
+                        android:id="@+id/pickup_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="95dp"
+                        android:layout_centerVertical="true"
+                        android:textSize="18sp"
+                        android:background="@drawable/pay_on_pickup"
+                        android:visibility="visible" />
+                    <Button
+                        android:layout_width="10dp"
+                        android:layout_height="22dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="277dp"
+                        android:background="@drawable/icon_arrow_right"
+                       />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/phonepay_upi"
+                    android:layout_width="350dp"
+                    android:layout_height="87dp"
+                    android:layout_marginTop="20dp"
+                    android:elevation="5dp"
+                    android:background="@drawable/white_bg_layout">
+
+                    <ImageView
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:src="@drawable/phonepe_logo"
+                        android:layout_centerVertical="true"
+                        android:id="@+id/phonpe_logo"
+                        android:layout_marginLeft="35dp"/>
+                    <TextView
+                        android:id="@+id/phonepay_upi_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="99dp"
+                        android:layout_centerVertical="true"
+                        android:textSize="18sp"
+                        android:background="@drawable/phonepay_upi"
+                        android:visibility="visible" />
+                    <Button
+                        android:layout_width="10dp"
+                        android:layout_height="22dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="280dp"
+                        android:background="@drawable/icon_arrow_right"
+                        />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/paytm"
+                    android:layout_width="350dp"
+                    android:layout_height="87dp"
+                    android:layout_marginTop="20dp"
+                    android:elevation="5dp"
+                    android:background="@drawable/white_bg_layout">
+
+                    <ImageView
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:src="@drawable/paytm_logo"
+                        android:layout_centerVertical="true"
+                        android:id="@+id/paytm_logo"
+                        android:layout_marginLeft="35dp"/>
+                    <TextView
+                        android:id="@+id/paytm_upi_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="99dp"
+                        android:layout_centerVertical="true"
+                        android:textSize="18sp"
+                        android:background="@drawable/paytm_upi"
+                        android:visibility="visible" />
+                    <Button
+                        android:layout_width="10dp"
+                        android:layout_height="22dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="280dp"
+                        android:background="@drawable/icon_arrow_right"
+                       />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/gpay"
+                    android:layout_width="350dp"
+                    android:layout_height="87dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="100dp"
+                    android:elevation="5dp"
+                    android:background="@drawable/white_bg_layout">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@id/google_pay_logo"
+                        android:layout_marginLeft="35dp"
+                        android:layout_centerVertical="true">
+
+                        <ImageView
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:src="@drawable/circlular_view"
+                            android:layout_centerVertical="true"
+                            android:layout_centerHorizontal="true" />
+
+                        <ImageView
+                            android:layout_width="17dp"
+                            android:layout_height="17dp"
+                            android:src="@drawable/google_pay_logo"
+                            android:layout_centerVertical="true"
+                            android:layout_centerHorizontal="true"
+                            android:id="@+id/google_pay_logo"
+                            android:layout_marginLeft="20dp"/>
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/gpay_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="99dp"
+                        android:layout_marginTop="30dp"
+                        android:textSize="18sp"
+                        android:background="@drawable/gpay_upi"
+                        android:visibility="visible" />
+                    <Button
+                        android:layout_width="10dp"
+                        android:layout_height="22dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="280dp"
+                        android:background="@drawable/icon_arrow_right"
+                        />
+
+
+                </RelativeLayout>
+            </LinearLayout>
+
+        </ScrollView>
+        <RelativeLayout
+            android:layout_width="290dp"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:visibility="gone"
+            android:id="@+id/slideviewlayout"
+            android:background="@drawable/slideview_layout"
+            android:layout_marginBottom="20dp">
+
+        <ng.max.slideview.SlideView
+            android:id="@+id/slideView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:sv_animateSlideText="true"
+            app:sv_reverseSlide="false"
+            app:sv_buttonBackgroundColor="@android:color/transparent"
+            app:sv_buttonImage="@drawable/slideview_button"
+            app:sv_slideBackgroundColor="@android:color/transparent"
+            app:sv_slideTextColor="#FFF"
+            android:elevation="10dp"
+            />
+    </RelativeLayout>
+
+
+
+
+
+
+
+        <RelativeLayout
+            android:id="@+id/LoadingScreenRL"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="0dp"
+            android:background="#FFF">
+
+            <TextView
+                android:id="@+id/tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Placing order."
+                android:textColor="#227093"
+                android:textSize="26sp"
+                android:visibility="visible" />
+
+
+            <com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar
+                android:id="@+id/progressBarCenteredCustom"
+                android:layout_width="300dp"
+                android:layout_height="20dp"
+                android:layout_below="@+id/tv"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                app:rcBackgroundColor="#FFF"
+                app:rcMax="100"
+                app:rcProgress="20"
+                app:rcProgressColor="#227093"
+                app:rcRadius="20dp" />
+
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/tv"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="0dp"
+                android:layout_marginBottom="0dp">
+
+
+                <ImageView
+                    android:id="@+id/rocket"
+                    android:layout_width="57dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="bottom|center" />
+
+            </FrameLayout>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+
+
+</RelativeLayout>

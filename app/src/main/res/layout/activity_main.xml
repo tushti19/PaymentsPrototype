@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/front_page">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Updated UI"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:textSize="40dp"/>
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/white_bg_layout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="150dp"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:id="@+id/one"
+        android:text="Page Settings"/>
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/white_bg_layout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="250dp"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:id="@+id/two"
+        android:text="Preferred Shop"/>
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/white_bg_layout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="350dp"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold"
+        android:id="@+id/three"
+        android:textSize="20dp"
+        android:text="payments"/>
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/white_bg_layout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="450dp"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold"
+        android:id="@+id/four"
+        android:textSize="20dp"
+        android:text="settings"/>
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/white_bg_layout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="550dp"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold"
+        android:id="@+id/five"
+        android:textSize="20dp"
+        android:text="Feedback"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:text="Use Home Back Button to navigate"
+        android:layout_centerHorizontal="true"
+        android:textColor="#FFFFFF"/>
+
+
+
+
+</RelativeLayout>
