@@ -1,60 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_height="match_parent"
-    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content"
+    android:layout_below="@+id/view6"
     >
 
     <RelativeLayout
         android:layout_width="wrap_content"
-        android:layout_height="140dp"
+        android:layout_height="135dp"
         android:id="@+id/shopone"
         android:elevation="5dp"
-        android:layout_marginVertical="10dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:paddingTop="10dp"
+        android:layout_marginTop="10dp"
         android:paddingRight="10dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
-        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginHorizontal="10dp"
         android:background="@drawable/white_bg_layout">
 
         <RelativeLayout
-            android:layout_width="65dp"
-            android:layout_height="19dp"
+            android:layout_width="77dp"
+            android:layout_height="23dp"
             android:layout_alignParentEnd="true"
             android:background="@drawable/open_bg"
-            android:layout_marginTop="5dp"
+            android:layout_alignTop="@+id/shop_layout1"
             android:id="@+id/open1">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
-                android:layout_centerVertical="true"
                 android:text="Open"
-                android:textSize="8dp"
+                android:layout_marginTop="-2dp"
+                android:textSize="15sp"
                 android:textColor="#FFFFFF"
                 android:fontFamily="@font/poppins_semibold">
 
             </TextView></RelativeLayout>
         <RelativeLayout
-            android:layout_width="65dp"
-            android:layout_height="19dp"
+            android:layout_width="77dp"
+            android:layout_height="23dp"
             android:background="@drawable/closed_bg"
             android:layout_alignParentEnd="true"
+            android:layout_alignTop="@id/shop_layout1"
             android:id="@+id/closed1"
             android:visibility="gone">
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_centerHorizontal="true"
                 android:layout_centerVertical="true"
                 android:text="Closed"
-                android:textSize="8dp"
+                android:textSize="15dp"
+                android:layout_marginTop="-2dp"
+                android:gravity="center"
+                android:textColor="#FFFFFF"
+                android:fontFamily="@font/poppins_semibold"
+                >
+
+            </TextView></RelativeLayout>
+        <RelativeLayout
+            android:layout_width="77dp"
+            android:layout_height="23dp"
+            android:background="@drawable/partially_closed_bg"
+            android:layout_alignParentEnd="true"
+            android:id="@+id/partially_closed1"
+            android:layout_alignTop="@id/shop_layout1"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="Closed"
+                android:textSize="15dp"
+                android:layout_marginTop="-2dp"
+                android:gravity="center"
                 android:textColor="#FFFFFF"
                 android:fontFamily="@font/poppins_semibold"
                 >
@@ -63,39 +88,45 @@
 
 
 
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_toLeftOf="@id/clock"
-            android:layout_marginRight="5dp"
+            android:gravity="center"
+            android:layout_below="@id/open1"
+            android:layout_alignStart="@id/open1"
             android:text="Closing Time"
             android:fontFamily="@font/poppins_semibold"
-            android:textSize="8dp"
-            android:id="@+id/closing_time1"
-            android:layout_marginTop="27dp"/>
+            android:textSize="8sp"
+            android:layout_marginTop="5dp"
+            android:id="@+id/closing_time1" />
 
     <ImageView
         android:layout_width="9dp"
         android:layout_height="9dp"
-        android:layout_marginTop="29dp"
         android:id="@+id/clock"
+        android:layout_alignEnd="@id/open1"
+        android:layout_below="@id/open1"
+        android:layout_marginTop="7dp"
         android:layout_alignParentEnd="true"
         android:src="@drawable/clock" />
 
-    <Button
-            android:layout_width="69dp"
-            android:layout_height="15dp"
+    <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:id="@+id/view_in_maps1"
-            android:layout_alignParentBottom="true"
-            android:layout_marginBottom="24dp"
+            android:layout_marginBottom="6dp"
+            android:layout_alignBottom="@id/shop_info1"
             android:layout_toLeftOf="@id/imagemap"
-            android:background="@drawable/viewinmaps"/>
+            android:background="@android:color/transparent"
+            android:src="@drawable/viewinmaps"/>
         <ImageView
-            android:layout_width="22dp"
-            android:layout_height="22dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginBottom="20dp"
+            android:layout_marginBottom="4dp"
+            android:layout_alignBottom="@id/shop_info1"
             android:id="@+id/imagemap"
             android:src="@drawable/technology"/>
 
@@ -104,7 +135,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/shop_info1"
-            android:layout_marginLeft="0dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="15dp"
+            android:layout_alignTop="@id/shop_layout1"
             android:layout_toRightOf="@+id/shop_layout1">
 
             <TextView
@@ -112,6 +145,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Shop Name"
+                android:layout_marginTop="-5dp"
                 android:fontFamily="@font/poppins_semibold"
                 android:textColor="#227093"
                 android:textSize="15sp"
@@ -120,20 +154,22 @@
                 android:id="@+id/Location1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:gravity="center_vertical"
                 android:layout_below="@+id/ShopsName1"
                 android:text="Location"
                 android:fontFamily="@font/poppins_semibold"
-                android:textColor="#5A5757"
-                android:textSize="8dp" />
+                android:textColor="#858585"
+                android:textSize="9sp" />
 
             <TextView
                 android:id="@+id/Files1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/Location1"
-                android:layout_marginTop="5dp"
                 android:textColor="#000000"
-                android:textSize="9dp"
+                android:textSize="9sp"
+                android:layout_marginTop="4dp"
+                android:gravity="center_vertical"
                 android:fontFamily="@font/poppins_semibold"
                 android:textStyle="bold"
                 android:text="Currently Accepting Orders" />
@@ -141,23 +177,25 @@
                 android:id="@+id/Distance1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_toRightOf="@+id/ShopsName1"
+                android:gravity="center_vertical"
+                android:layout_below="@id/ShopsName1"
                 android:text="6 km"
-                android:layout_marginTop="5dp"
+                android:layout_alignTop="@id/Location1"
                 android:fontFamily="@font/poppins_semibold"
-                android:layout_marginLeft="8dp"
-                android:textSize="10sp"
+                android:layout_alignEnd="@id/ShopsName1"
+                android:textSize="9sp"
                 android:textColor="#818181" />
 
-        </RelativeLayout>
-    <Button
-        android:layout_width="80dp"
-        android:layout_height="30dp"
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:id="@+id/showtime1"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="20dp"
-        android:layout_toRightOf="@id/shop_layout1"
-        android:background="@drawable/show_text"/>
+        android:layout_below="@id/Files1"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/show_text"/> </RelativeLayout>
 
 
         <TextView
@@ -173,14 +211,19 @@
 
 
         <RelativeLayout
-            android:layout_width="120dp"
-            android:layout_height="120dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="15dp"
             android:layout_alignParentStart="true"
-            android:background="@drawable/shop_bg"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/shop_white_bg"
+            android:elevation="3dp"
             android:id="@+id/shop_layout1">
             <ImageView
-                android:layout_width="60dp"
-                android:layout_height="60dp"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
                 android:src="@drawable/shopblue"
                 android:layout_centerVertical="true"
                 android:layout_centerHorizontal="true"    />

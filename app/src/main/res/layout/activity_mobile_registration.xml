@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:padding="15dp"
+    android:id="@+id/rootlayout"
+    android:background="#FFFFFF"
+    android:layout_height="match_parent"
+    tools:context=".MobileRegistration">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="140dp"
+        android:id="@+id/relativeLayoutRegister">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="You are one step away from effortlessly printing your files."
+        android:textSize="22sp"
+        android:textColor="#000000"
+        android:id="@+id/textview"
+        android:fontFamily="@font/poppins"
+        android:gravity="center"
+       />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:paddingVertical="11dp"
+        android:id="@+id/phoneRL"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/login_page_phone_text"
+        android:layout_below="@id/textview">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/phoneblue"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="20dp"
+            android:id="@+id/phoneIV"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:fontFamily="@font/poppins"
+            android:textColor="#818181"
+            android:gravity="center"
+            android:text="Enter your Mobile Number"
+            android:layout_alignTop="@id/phoneIV"
+            android:layout_alignBottom="@id/phoneIV"
+            android:id="@+id/mobileTV"
+            android:layout_toRightOf="@id/phoneIV"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="20dp"
+            />
+
+    </RelativeLayout>
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:paddingVertical="10dp"
+        android:layout_alignStart="@id/phoneRL"
+        android:layout_alignEnd="@id/phoneRL"
+        android:layout_alignTop="@id/phoneRL"
+        android:layout_alignBottom="@id/phoneRL"
+        android:id="@+id/login_with_phoneBtn"
+        android:background="#00FFFFFF" />
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:textColor="#000000"
+        android:text="+91"
+        android:gravity="center"
+        android:background="@drawable/login_page_edit_text"
+        android:paddingHorizontal="15dp"
+        android:layout_alignStart="@id/phoneRL"
+        android:layout_alignTop="@id/phoneRL"
+        android:layout_alignBottom="@id/phoneRL"
+        android:textSize="18sp"
+        android:visibility="gone"
+        android:id="@+id/country_codeTV"
+        android:fontFamily="@font/poppins"/>
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:textColor="#000000"
+        android:textColorHint="#000000"
+        android:background="@drawable/phone_et"
+        android:paddingHorizontal="15dp"
+        android:visibility="gone"
+        android:inputType="phone"
+        android:gravity="center_vertical"
+        android:id="@+id/PhoneNumber"
+        android:layout_toRightOf="@id/country_codeTV"
+        android:layout_alignBottom="@id/country_codeTV"
+        android:layout_marginLeft="-2dp"
+        android:layout_alignEnd="@id/phoneRL"
+        android:layout_alignTop="@id/country_codeTV"
+        android:textSize="18sp"
+        android:fontFamily="@font/poppins"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Please Enter a valid Mobile Number"
+        android:layout_below="@id/phoneRL"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone"
+        android:gravity="center_vertical"
+        android:textColor="#C44848"
+        android:textSize="11sp"
+        android:id="@+id/valid_text"
+        android:fontFamily="@font/poppins" />
+        <TextView
+            android:id="@+id/mobilenumTV"
+            android:layout_width="wrap_content"
+            android:layout_height="17dp"
+            android:layout_alignStart="@id/phoneRL"
+            android:layout_alignTop="@id/phoneRL"
+            android:layout_marginLeft="150dp"
+            android:background="#FFFFFF"
+            android:fontFamily="@font/poppins"
+            android:gravity="center_vertical"
+            android:text="Mobile Number"
+            android:textColor="#227093"
+            android:textSize="12sp"
+            android:layout_marginTop="15dp"
+            android:visibility="gone"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#227093"
+        android:textSize="18sp"
+        android:text="Back"
+        android:id="@+id/back_button"
+        android:layout_marginTop="25dp"
+        android:textAllCaps="false"
+        android:layout_below="@id/phoneRL"
+        android:fontFamily="@font/poppins"
+        android:background="@android:color/transparent"/>
+
+
+    <Button
+        android:layout_width="119dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/register_mobile_next"
+        android:layout_below="@id/phoneRL"
+        android:textAllCaps="false"
+        android:text="Next"
+        android:visibility="gone"
+        android:fontFamily="@font/poppins_semibold"
+        android:gravity="center_vertical"
+        android:paddingLeft="30dp"
+        android:textSize="18sp"
+        android:textColor="#FFFFFF"
+        android:id="@+id/next_button"
+        android:layout_alignParentEnd="true"
+        android:layout_alignBottom="@id/back_button"
+        android:layout_alignTop="@id/back_button"/>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/arrow"
+        android:elevation="5dp"
+        android:layout_alignEnd="@id/next_button"
+        android:layout_alignTop="@id/next_button"
+        android:layout_alignBottom="@id/next_button"
+        android:layout_marginRight="30dp"/>
+
+
+</RelativeLayout>
+
+
+</RelativeLayout>

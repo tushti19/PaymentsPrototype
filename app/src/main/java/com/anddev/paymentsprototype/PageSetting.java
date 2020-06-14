@@ -26,6 +26,7 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.ScrollView;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ToggleButton;
 
@@ -49,6 +50,8 @@ public class PageSetting extends AppCompatActivity {
 
     RelativeLayout rootLayout;
 
+    TextView apply;
+
 
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
@@ -62,6 +65,9 @@ public class PageSetting extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_page_setting);
         relativeLayout = findViewById(R.id.bottom);
+
+
+        apply = findViewById(R.id.applytv);
 
         rootLayout = findViewById(R.id.rootlayout);
         rootLayout.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
@@ -189,10 +195,13 @@ public class PageSetting extends AppCompatActivity {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
 
-               if(apply_to_all.isChecked()) {next.setVisibility(View.INVISIBLE);
+               if(apply_to_all.isChecked())
+               {next.setVisibility(View.INVISIBLE);
+                apply.setText("Settings are applied for all documents");
                 done.setVisibility(View.VISIBLE);}
                else
                {
+                   apply.setText("Apply these settings for all documents");
                    done.setVisibility(View.INVISIBLE);
                    next.setVisibility(View.VISIBLE);
                }
@@ -231,7 +240,7 @@ public class PageSetting extends AppCompatActivity {
 
 
 
-        ValueAnimator slideAnimator = ValueAnimator.ofInt(initialHt,finalHt).setDuration(1000);
+        ValueAnimator slideAnimator = ValueAnimator.ofInt(initialHt,finalHt + 20).setDuration(1000);
         slideAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
             @Override
             public void onAnimationUpdate(ValueAnimator animation) {

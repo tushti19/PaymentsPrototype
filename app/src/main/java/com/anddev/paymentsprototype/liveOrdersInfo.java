@@ -10,9 +10,18 @@ public class liveOrdersInfo {
     String recieved;
     String processed;
     String ready;
+    String rated;
     String completed;
 
     public liveOrdersInfo() {
+    }
+
+    public String getRated() {
+        return rated;
+    }
+
+    public void setRated(String rated) {
+        this.rated = rated;
     }
 
     public String getShopName() {
@@ -87,7 +96,7 @@ public class liveOrdersInfo {
         this.completed = completed;
     }
 
-    public liveOrdersInfo(String shopName, String dateTime, String location, String id, String price, String recieved, String processed, String ready, String completed) {
+    public liveOrdersInfo(String shopName, String dateTime, String location, String id, String price, String recieved, String processed, String ready, String completed, String rated) {
         this.shopName = shopName;
         this.dateTime = dateTime;
         this.location = location;
@@ -97,5 +106,6 @@ public class liveOrdersInfo {
         this.processed = processed;
         this.ready = ready;
         this.completed = completed;
+        this.rated = rated;
     }
 }

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OnboardingPageTwo">
+
+
+    <ImageView
+        android:layout_width="243.6dp"
+        android:layout_height="324dp"
+        android:layout_marginTop="35dp"
+        android:id="@+id/onboardingImageOne"
+        android:src="@drawable/onboarding_image_two"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="50dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/onboardingImageOne"
+        android:layout_marginTop="35dp"
+        android:text="Hassle-free Printing"
+        android:textColor="#000000"
+        android:id="@+id/textview"
+        android:fontFamily="@font/poppins_bold"
+        android:textSize="26sp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/textview"
+        android:gravity="center"
+        android:text="Add multiple files for printing at a time, \n either directly through the app or \n by sharing opened files with Sleefax."
+        android:textColor="#227093"
+        android:id="@+id/textview1"
+        android:fontFamily="@font/poppins"
+        android:textSize="14sp"/>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/onboarding_next_bg"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp"
+        android:layout_marginRight="-20dp"
+        android:paddingHorizontal="20dp"
+        android:id="@+id/next"
+        android:paddingTop="5dp"
+        android:paddingBottom="10dp"
+        android:layout_alignEnd="@id/textview"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Get Started"
+            android:layout_centerVertical="true"
+            android:id="@+id/next_text"
+            android:textSize="18sp"
+            android:textColor="#FFFFFF"
+            android:fontFamily="@font/poppins_medium"/>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@id/textview"
+        android:id="@+id/dots"
+        android:background="@drawable/two_dots"
+        android:layout_marginBottom="50dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="23dp"
+            android:src="@drawable/blue_dot" />
+    </RelativeLayout>
+
+</RelativeLayout>

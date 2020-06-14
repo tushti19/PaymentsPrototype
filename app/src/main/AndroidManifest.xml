@@ -9,13 +9,38 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".LiveOrders"></activity>
+        <activity android:name=".MobileRegistration"
+            android:windowSoftInputMode="adjustResize"></activity>
+        <activity
+            android:name=".LoginPage"
+            android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".OrderCompleted" />
+        <activity android:name=".ShowFullDetails" />
+        <activity android:name=".OrderPlaced" />
+        <activity
+            android:name=".OtpActivity"
+            android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".ChangeEmail" />
+        <activity android:name=".ChangeNumber" />
+        <activity android:name=".ChangeName" />
+        <activity android:name=".SendFeedback" />
+        <activity android:name=".ReportAnIssue" />
+        <activity android:name=".ContactUs" />
+        <activity android:name=".EditProfile" />
+        <activity android:name=".YourOrders" />
+        <activity android:name=".OnboardingPageTwo" />
+        <activity android:name=".OnboardingPageOne" />
+        <activity android:name=".ShopTimingAndPricing" />
+        <activity android:name=".LiveOrdersHomePage" />
+        <activity android:name=".ReviewYourOrder" />
+        <activity android:name=".LiveOrders" />
         <activity android:name=".SelectFiles" />
         <activity android:name=".feedback" />
         <activity android:name=".Setting" />
         <activity android:name=".PaymentsActivity" />
-        <activity android:name=".PageSetting"
-            android:windowSoftInputMode="adjustResize"/>
+        <activity
+            android:name=".PageSetting"
+            android:windowSoftInputMode="adjustResize" />
         <activity android:name=".PreferredShop" />
         <activity android:name=".PaymentSelected" />
         <activity android:name=".MainActivity">

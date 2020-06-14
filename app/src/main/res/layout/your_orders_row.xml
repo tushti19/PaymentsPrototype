@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:paddingVertical="10dp"
+        android:background="@drawable/your_orders_background"
+        android:elevation="5dp">
+
+        <RelativeLayout
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="10dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/shop_bg"
+            android:elevation="5dp"
+            android:id="@+id/shop_layout1">
+            <ImageView
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:src="@drawable/shopblue"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"    />
+        </RelativeLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="17sp"
+            android:textColor="#000000"
+            android:id="@+id/ShopsName"
+            android:fontFamily="@font/poppins_medium"
+            android:layout_toRightOf="@id/shop_layout1"
+            android:layout_alignTop="@id/shop_layout1"
+            android:layout_marginLeft="10dp"
+            android:text="MIT Print Shop"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:textColor="#B5B5B5"
+            android:layout_below="@id/ShopsName"
+            android:id="@+id/Location"
+            android:fontFamily="@font/poppins_medium"
+            android:layout_alignStart="@id/ShopsName"
+            android:text="Kothrud, Pune"/>
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/newi"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:id="@+id/info"
+            android:layout_alignTop="@id/shop_layout1"/>
+
+        <TextView
+            android:id="@+id/textview1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/shop_layout1"
+            android:layout_alignStart="@id/shop_layout1"
+            android:layout_marginLeft="10dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Ordered On"
+            android:textColor="#B5B5B5"
+            android:textSize="11sp" />
+        <TextView
+            android:id="@+id/DateTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textview1"
+            android:layout_alignStart="@id/textview1"
+            android:fontFamily="@font/poppins_medium"
+            android:text="10 May, 2020 at 02:15 PM"
+            android:textColor="#000000"
+            android:textSize="10sp" />
+        <TextView
+            android:id="@+id/textview2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textview1"
+            android:layout_alignStart="@id/textview1"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Total Amount"
+            android:layout_marginTop="30dp"
+            android:textColor="#B5B5B5"
+            android:textSize="11sp" />
+        <TextView
+            android:id="@+id/rupeeSymbol"
+            android:layout_width="9dp"
+            android:layout_height="9dp"
+            android:layout_below="@id/textview2"
+            android:layout_marginTop="4dp"
+            android:layout_alignStart="@id/textview2"
+            android:fontFamily="@font/poppins_medium"
+            android:background="@drawable/india_rupee"
+            android:textColor="#000000"
+            android:textSize="10sp" />
+        <TextView
+            android:id="@+id/Amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textview2"
+            android:layout_toRightOf="@id/rupeeSymbol"
+            android:fontFamily="@font/poppins_medium"
+            android:layout_marginLeft="4dp"
+            android:text= "89"
+            android:textColor="#000000"
+            android:textSize="11sp" />
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rate_this_order"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="5dp"
+            android:layout_marginRight="20dp"
+            android:layout_alignTop="@+id/textview1"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/rate_this_order_bg">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textview3"
+                android:text="Rate This Order"
+                android:layout_centerVertical="true"
+                android:textSize="12sp"
+                android:textColor="#FFFFFF"
+                android:fontFamily="@font/poppins_medium"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/order_rated"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="5dp"
+            android:layout_marginRight="20dp"
+            android:layout_alignStart="@id/rate_this_order"
+            android:layout_alignEnd="@id/rate_this_order"
+            android:layout_alignTop="@+id/textview1"
+            android:layout_alignParentEnd="true"
+            android:visibility="gone"
+            android:background="@drawable/order_rated_bg">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/orderRated_tv"
+                android:text="Order Rated"
+                android:layout_centerVertical="true"
+                android:textSize="12sp"
+                android:textColor="#FFFFFF"
+                android:fontFamily="@font/poppins_medium"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/tick"
+                android:layout_toRightOf="@+id/orderRated_tv"
+                android:layout_alignTop="@id/orderRated_tv"
+                android:layout_alignBottom="@id/orderRated_tv"
+                android:layout_marginLeft="10dp"/>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/textview4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textview1"
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@id/Amount"
+            android:layout_marginTop="-5dp"
+            android:layout_marginRight="20dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Recieved Successfully"
+            android:textColor="#B5B5B5"
+            android:textSize="11sp" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.3dp"
+            android:layout_below="@id/textview4"
+            android:id="@+id/divider"
+            android:layout_marginTop="10dp"
+            android:alpha="0.5"
+            android:background="#ACACAC"/>
+        <ImageButton
+            android:layout_width="75dp"
+            android:layout_height="15dp"
+            android:layout_below="@id/divider"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/repeat_order"
+            android:layout_alignStart="@id/textview1"/>
+        <ImageButton
+            android:layout_width="105dp"
+            android:layout_height="15dp"
+            android:layout_below="@id/divider"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/view_order_details"
+            android:layout_alignEnd="@id/textview4"/>
+
+
+
+
+
+
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

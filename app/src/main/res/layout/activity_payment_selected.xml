@@ -16,10 +16,11 @@
 
         <ng.max.slideview.SlideView
             android:id="@+id/slideView"
-            android:layout_width="290dp"
+            android:layout_width="305dp"
             android:layout_height="60dp"
             app:sv_animateSlideText="true"
             app:sv_reverseSlide="false"
+            android:layout_marginLeft="-15dp"
             android:textAlignment="center"
             app:sv_buttonBackgroundColor="@android:color/transparent"
             app:sv_buttonImage="@drawable/slideview_button"

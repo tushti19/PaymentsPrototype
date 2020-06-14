@@ -14,7 +14,7 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_marginStart="9dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
         android:layout_marginEnd="5dp"
         android:background="@drawable/liveorderview">
 
@@ -27,7 +27,7 @@
             android:layout_marginTop="25dp"
             android:layout_marginEnd="30dp"
             android:fontFamily="@font/poppins_semibold"
-            android:text="Order id"
+            android:text="ID #21345467"
             android:textColor="#227093"
             android:textSize="18sp"
             android:textStyle="bold" />
@@ -42,8 +42,8 @@
             android:layout_marginStart="-30dp"
             android:layout_marginTop="0dp"
             android:layout_marginEnd="-30dp"
-            android:fontFamily="@font/poppins_semibold"
-            android:text="OrderDateTime"
+            android:fontFamily="@font/poppins"
+            android:text="11:15 AM 20/2/20"
             android:textAlignment="center"
             android:textColor="#4D4949"
             android:textSize="12sp" />
@@ -53,10 +53,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/currentOrderID"
-            android:layout_marginStart="10dp"
+            android:layout_marginStart="20dp"
             android:layout_marginTop="-2dp"
             android:fontFamily="@font/poppins_semibold"
-            android:text="Shop Name"
+            android:text="MIT Xerox Shop"
             android:textColor="#000000"
             android:textSize="18sp"
             android:textStyle="bold" />
@@ -70,22 +70,61 @@
             android:layout_marginStart="0dp"
             android:layout_marginTop="0dp"
             android:fontFamily="@font/poppins_semibold"
-            android:text="Location"
+            android:text="Kothrud"
             android:textColor="#4D4949"
             android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/total_files"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Stat1RL"
+            android:layout_alignStart="@id/currentOrderShopName"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="0dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Total Files : 3"
+            android:textSize="13dp"
+            android:textAlignment="center"
+            android:textColor="#000000" />
+
+        <TextView
+            android:id="@+id/total_texview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Stat4RL"
+            android:layout_toLeftOf="@id/rupee_symbol"
+            android:layout_marginRight="10dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Total"
+            android:textSize="13dp"
+            android:textAlignment="center"
+            android:textColor="#000000" />
+        <ImageView
+            android:id="@+id/rupee_symbol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Stat4RL"
+            android:layout_toLeftOf="@id/currentOrderPrice"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="0dp"
+            android:background="@drawable/rupee_live_orders"/>
 
         <TextView
             android:id="@+id/currentOrderPrice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/currentOrderDateTime"
-            android:layout_alignStart="@+id/currentOrderDateTime"
-            android:layout_alignEnd="@+id/currentOrderDateTime"
+            android:layout_below="@+id/Stat4RL"
+            android:layout_alignParentEnd="true"
             android:layout_marginStart="0dp"
             android:layout_marginTop="0dp"
-            android:layout_marginEnd="0dp"
+            android:layout_marginEnd="30dp"
             android:fontFamily="@font/poppins_semibold"
-            android:text="Price"
+            android:text=" 89"
+            android:textSize="13dp"
             android:textAlignment="center"
             android:textColor="#000000" />
 
@@ -162,7 +201,10 @@
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="0dp"
                 android:text="Received"
-                android:textColor="#E9E9E9" />
+                android:elevation="5dp"
+                android:textSize="12dp"
+                android:fontFamily="@font/poppins"
+                android:textColor="#227093" />
 
             <View
                 android:id="@+id/statball1"
@@ -171,7 +213,7 @@
                 android:layout_below="@+id/stat1"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="5dp"
-                android:background="@drawable/graystatballs" />
+                android:background="@drawable/done_live_orders" />
         </RelativeLayout>
 
         <RelativeLayout

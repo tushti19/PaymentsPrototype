@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#F2F4F4"
     tools:context=".LiveOrders">
     
     <RelativeLayout
@@ -36,13 +37,17 @@
 
     </RelativeLayout>
 
+
     <ListView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:paddingHorizontal="8dp"
         android:layout_below="@id/upperLyout"
+        android:layout_marginTop="-10dp"
         android:divider="@android:color/transparent"
-        android:layout_marginBottom="20dp"
         android:id="@+id/listview"/>
+
+
 
 
 
@@ -59,54 +64,54 @@
             android:layout_width="16dp"
             android:layout_height="16dp"
             android:layout_alignParentRight="true"
-            android:layout_marginRight="40dp"
+            android:layout_marginRight="20dp"
             android:src="@drawable/cancel"
             android:id="@+id/cancel"
-            android:layout_marginTop="22dp"/>
+            android:layout_marginTop="30dp"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="45dp"
+            android:layout_marginTop="30dp"
             android:gravity="center"
+            android:visibility="gone"
             android:fontFamily="@font/poppins_semibold"
             android:textColor="#000000"
-            android:visibility="gone"
             android:id="@+id/lovedittext"
-            android:textSize="14dp"/>
+            android:textSize="15dp"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="45dp"
+            android:layout_marginTop="30dp"
             android:fontFamily="@font/poppins_semibold"
             android:textColor="#000000"
             android:visibility="gone"
             android:id="@+id/greattext"
-            android:textSize="14dp"/>
+            android:textSize="15dp"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="45dp"
+            android:layout_marginTop="30dp"
             android:visibility="gone"
             android:id="@+id/averagetext"
             android:fontFamily="@font/poppins_semibold"
             android:textColor="#000000"
-            android:textSize="14dp"/>
+            android:textSize="15dp"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="45dp"
+            android:layout_marginTop="30dp"
             android:fontFamily="@font/poppins_semibold"
             android:textColor="#000000"
             android:visibility="gone"
             android:id="@+id/badtext"
-            android:textSize="14dp"/>
+            android:textSize="15dp"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -114,16 +119,16 @@
             android:id="@+id/fucktext"
             android:visibility="gone"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="45dp"
+            android:layout_marginTop="30dp"
             android:fontFamily="@font/poppins_semibold"
             android:textColor="#000000"
-            android:textSize="14dp"/>
+            android:textSize="15dp"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Rate your experience with"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="29dp"
+            android:layout_marginTop="38dp"
             android:id="@+id/rate_your_exp"
             android:fontFamily="@font/poppins_semibold"
             android:textColor="#000000"
@@ -136,7 +141,6 @@
             android:elevation="10dp"
             android:layout_centerHorizontal="true"
             android:layout_below="@+id/rate_your_exp"
-            android:layout_marginTop="5dp"
             android:textStyle="bold"
             android:fontFamily="@font/poppins_semibold"
             android:textColor="#227093"
@@ -145,7 +149,7 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:src="@drawable/fuck_small"
-            android:layout_marginTop="119dp"
+            android:layout_marginTop="109dp"
             android:id="@+id/fucksmall"
             android:layout_alignParentLeft="true"
             android:layout_marginLeft="33dp"/>
@@ -153,7 +157,7 @@
             android:layout_width="74dp"
             android:layout_height="74dp"
             android:src="@drawable/fuck_big"
-            android:layout_marginTop="112dp"
+            android:layout_marginTop="102dp"
             android:id="@+id/fuckbig"
             android:visibility="gone"
             android:layout_alignParentLeft="true"
@@ -174,7 +178,7 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:src="@drawable/bad_small"
-            android:layout_marginTop="119dp"
+            android:layout_marginTop="109dp"
             android:id="@+id/badsmall"
             android:layout_toLeftOf="@id/averagesmall"
             android:layout_toRightOf="@id/fucksmall"/>
@@ -182,7 +186,7 @@
             android:layout_width="74dp"
             android:layout_height="74dp"
             android:src="@drawable/bad_big"
-            android:layout_marginTop="112dp"
+            android:layout_marginTop="102dp"
             android:id="@+id/badbig"
             android:visibility="gone"
             android:layout_toRightOf="@id/fucksmall"
@@ -208,13 +212,13 @@
             android:layout_height="50dp"
             android:src="@drawable/average_small"
             android:id="@+id/averagesmall"
-            android:layout_marginTop="119dp"
+            android:layout_marginTop="109dp"
             android:layout_centerHorizontal="true"/>
         <ImageView
             android:layout_width="74dp"
             android:layout_height="74dp"
             android:src="@drawable/average_big"
-            android:layout_marginTop="112dp"
+            android:layout_marginTop="102dp"
             android:id="@+id/averagebig"
             android:visibility="gone"
             android:layout_centerHorizontal="true"/>
@@ -236,13 +240,13 @@
             android:layout_height="50dp"
             android:layout_toLeftOf="@id/loveditsmall"
             android:layout_toRightOf="@id/averagesmall"
-            android:layout_marginTop="119dp"
+            android:layout_marginTop="109dp"
             android:src="@drawable/great_small" />
         <ImageView
             android:layout_width="74dp"
             android:layout_height="74dp"
             android:src="@drawable/great_big"
-            android:layout_marginTop="112dp"
+            android:layout_marginTop="102dp"
             android:id="@+id/greatbig"
             android:visibility="gone"
             android:layout_toLeftOf="@id/loveditsmall"
@@ -268,13 +272,13 @@
             android:id="@+id/loveditsmall"
             android:layout_alignParentRight="true"
             android:layout_marginRight="33dp"
-            android:layout_marginTop="119dp"
+            android:layout_marginTop="109dp"
             android:src="@drawable/lovedit_small" />
         <ImageView
             android:layout_width="74dp"
             android:layout_height="74dp"
             android:src="@drawable/lovedit_big"
-            android:layout_marginTop="112dp"
+            android:layout_marginTop="102dp"
             android:id="@+id/loveditbig"
             android:visibility="gone"
             android:layout_alignParentRight="true"
@@ -299,8 +303,7 @@
             android:layout_marginTop="207dp"
             android:textSize="11dp"
             android:id="@+id/feedbacktext"
-            android:paddingLeft="20dp"
-            android:paddingTop="10dp"
+            android:padding="15dp"
             android:gravity="top"
             android:fontFamily="@font/poppins_semibold"
             android:hint="Tell us what can we improve..... (Optional)"

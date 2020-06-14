@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#F2F4F4"
     tools:context=".PaymentsActivity">
 
     <RelativeLayout
@@ -17,7 +18,7 @@
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="0dp"
-            android:elevation="10dp"
+            android:elevation="5dp"
             android:background="@drawable/payments_upper_blue_layout">
 
             <ImageView
@@ -61,21 +62,23 @@
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginTop="-10dp"
             android:layout_below="@+id/view">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
+                android:layout_marginTop="-10dp"
                 android:orientation="vertical">
 
                 <RelativeLayout
 
-                    android:layout_width="350dp"
+                    android:layout_width="340dp"
                     android:layout_height="87dp"
                     android:elevation="5dp"
                     android:id="@+id/pickup"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginTop="40dp"
                     android:background="@drawable/white_bg_layout">
 
                     <ImageView
@@ -99,14 +102,15 @@
                         android:layout_width="10dp"
                         android:layout_height="22dp"
                         android:layout_centerVertical="true"
-                        android:layout_marginLeft="277dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="29dp"
                         android:background="@drawable/icon_arrow_right"
                        />
                 </RelativeLayout>
 
                 <RelativeLayout
                     android:id="@+id/phonepay_upi"
-                    android:layout_width="350dp"
+                    android:layout_width="340dp"
                     android:layout_height="87dp"
                     android:layout_marginTop="20dp"
                     android:elevation="5dp"
@@ -132,14 +136,15 @@
                         android:layout_width="10dp"
                         android:layout_height="22dp"
                         android:layout_centerVertical="true"
-                        android:layout_marginLeft="280dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="29dp"
                         android:background="@drawable/icon_arrow_right"
                         />
                 </RelativeLayout>
 
                 <RelativeLayout
                     android:id="@+id/paytm"
-                    android:layout_width="350dp"
+                    android:layout_width="340dp"
                     android:layout_height="87dp"
                     android:layout_marginTop="20dp"
                     android:elevation="5dp"
@@ -165,14 +170,15 @@
                         android:layout_width="10dp"
                         android:layout_height="22dp"
                         android:layout_centerVertical="true"
-                        android:layout_marginLeft="280dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="29dp"
                         android:background="@drawable/icon_arrow_right"
                        />
                 </RelativeLayout>
 
                 <RelativeLayout
                     android:id="@+id/gpay"
-                    android:layout_width="350dp"
+                    android:layout_width="340dp"
                     android:layout_height="87dp"
                     android:layout_marginTop="20dp"
                     android:layout_marginBottom="100dp"
@@ -216,7 +222,8 @@
                         android:layout_width="10dp"
                         android:layout_height="22dp"
                         android:layout_centerVertical="true"
-                        android:layout_marginLeft="280dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="29dp"
                         android:background="@drawable/icon_arrow_right"
                         />
 
@@ -226,10 +233,13 @@
 
         </ScrollView>
         <RelativeLayout
-            android:layout_width="290dp"
+            android:layout_width="305dp"
             android:layout_height="60dp"
             android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="20dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="20dp"
             android:visibility="gone"
             android:id="@+id/slideviewlayout"
             android:background="@drawable/slideview_layout"
@@ -237,10 +247,11 @@
 
         <ng.max.slideview.SlideView
             android:id="@+id/slideView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="320dp"
+            android:layout_height="60dp"
             app:sv_animateSlideText="true"
             app:sv_reverseSlide="false"
+            android:layout_marginLeft="-15dp"
             app:sv_buttonBackgroundColor="@android:color/transparent"
             app:sv_buttonImage="@drawable/slideview_button"
             app:sv_slideBackgroundColor="@android:color/transparent"

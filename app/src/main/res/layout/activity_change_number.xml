@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChangeNumber">
+
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/back_button"
+        android:background="@android:color/transparent"
+        android:src="@drawable/arrow_left_black"
+        android:layout_alignTop="@id/text_edit"
+        android:layout_alignBottom="@id/text_edit"
+        android:layout_marginVertical="10dp"
+        android:layout_marginLeft="20dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Edit Profile"
+        android:id="@+id/text_edit"
+        android:textColor="#000000"
+        android:fontFamily="@font/poppins_semibold"
+        android:layout_toRightOf="@id/back_button"
+        android:textSize="26sp"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="35dp"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="35dp"
+        android:id="@+id/new_profileRL"
+        android:layout_alignStart="@id/back_button"
+        android:layout_marginLeft="15dp"
+        android:layout_below="@+id/back_button"
+        android:layout_marginTop="80dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Phone Number"
+            android:id="@+id/new_phone_tv"
+            android:textColor="#000000"
+            android:fontFamily="@font/poppins"
+            android:textSize="15sp"/>
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="8299828908"
+            android:background="@android:color/transparent"
+            android:layout_alignStart="@id/new_phone_tv"
+            android:layout_below="@id/new_phone_tv"
+            android:layout_marginTop="10dp"
+            android:textColorHint="#000000"
+            android:inputType="number"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:id="@+id/new_Phone"
+            android:fontFamily="@font/poppins"
+            android:layout_marginLeft="10dp"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#707070"
+            android:id="@+id/bluediv1"
+            android:layout_alignBottom="@id/new_Phone" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Please Enter a valid Mobile Number"
+            android:layout_below="@id/bluediv1"
+            android:layout_alignStart="@id/new_Phone"
+            android:visibility="invisible"
+            android:textColor="#C44848"
+            android:textSize="11sp"
+            android:id="@+id/valid_text"
+            android:fontFamily="@font/poppins" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/valid_text"
+            android:background="@drawable/edit_profile_buttons"
+            android:layout_alignStart="@id/bluediv1"
+            android:visibility="gone"
+            android:layout_alignEnd="@id/bluediv1"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="10dp"
+            android:id="@+id/save_changes"
+            android:layout_marginBottom="10dp"
+            android:text="Save Changes"
+            android:textColor="#FFFFFF"
+            android:fontFamily="@font/poppins_semibold"
+            android:textSize="19sp"/>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

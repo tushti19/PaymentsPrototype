@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".YourOrders">
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/back"
+        android:background="@drawable/arrow_left_black"
+        android:layout_marginTop="35dp"
+        android:layout_marginLeft="25dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textview"
+        android:text="Your Orders"
+        android:textColor="#000000"
+        android:fontFamily="@font/poppins_medium"
+        android:textSize="26sp"
+        android:layout_toRightOf="@id/back"
+        android:layout_marginTop="26dp"
+        android:layout_marginLeft="50dp"/>
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:divider="@android:color/transparent"
+        android:id="@+id/listview"
+        android:layout_below="@id/textview"
+        android:layout_marginTop="20dp"/>
+
+
+</RelativeLayout>

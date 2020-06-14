@@ -15,7 +15,7 @@ import android.widget.RelativeLayout;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button one,two,three,four,five;
+    Button one,two,three,four,five,six,seven,eight,nine,ten,eleven,twelve,thirteen,fourteen,fifteen;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -56,9 +56,80 @@ public class MainActivity extends AppCompatActivity {
         five.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this,LiveOrdersHomePage.class));
+            }
+        });
+        six = findViewById(R.id.six);
+        six.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this,ReviewYourOrder.class));
+            }
+        });
+        seven = findViewById(R.id.seven);
+        seven.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this,OnboardingPageOne.class));
+            }
+        });
+        eight = findViewById(R.id.eight);
+        eight.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this,YourOrders.class));
+            }
+        });
+        nine = findViewById(R.id.nine);
+        nine.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this,LiveOrders.class));
             }
         });
+        ten = findViewById(R.id.ten);
+        ten.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this,ContactUs.class));
+            }
+        });
+        eleven = findViewById(R.id.eleven);
+        eleven.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this,ReportAnIssue.class));
+            }
+        });
+        twelve = findViewById(R.id.twelve);
+        twelve.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this,SendFeedback.class));
+            }
+        });
+        thirteen = findViewById(R.id.thirteen);
+        thirteen.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this,OrderPlaced.class));
+            }
+        });
+        fourteen = findViewById(R.id.fourteen);
+        fourteen.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this,OrderCompleted.class));
+            }
+        });
+        fifteen = findViewById(R.id.fifteen);
+        fifteen.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this,LoginPage.class));
+            }
+        });
+
 
 
 

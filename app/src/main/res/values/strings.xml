@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">PaymentsPrototype</string>
+
+    <string name="Id">your clipboard- <u>incsleefax@gmail.com</u>.</string>
+    <string name="ShowFullDetails"> <u>Show Full Details</u></string>
+    <string name="ViewInMaps"> <u>View in Maps</u></string>
+    <string name="ViewFile"> <u>View File</u></string>
+    <string name="customize"> <u>Customize</u></string>
+    <string name="find"> <u>Find us on Google Maps</u></string>
+    <string name="call"> <u>Give us a Call</u></string>
+    <string name="mail"> <u>Send us an Email</u></string>
+    <string name="Terms">By continuing, you agree to the <b>Terms of services</b> and <b>Privacy policy</b>.</string>
 </resources>
+

@@ -6,10 +6,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.animation.AnimatorSet;
 import android.animation.ValueAnimator;
 import android.content.res.Resources;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.DisplayMetrics;
 import android.util.Log;
 import android.util.TypedValue;
+import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.AccelerateDecelerateInterpolator;
@@ -56,12 +60,15 @@ public class LiveOrders extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_live_orders);
+
+
+
         ArrayList<liveOrdersInfo> arrayList = new ArrayList<>();
-        arrayList.add(new liveOrdersInfo("","","","","","","","",""));
-        arrayList.add(new liveOrdersInfo("","","","","","","","",""));
-        arrayList.add(new liveOrdersInfo("","","","","","","","",""));
-        arrayList.add(new liveOrdersInfo("","","","","","","","",""));
-        arrayList.add(new liveOrdersInfo("","","","","","","","",""));
+        arrayList.add(new liveOrdersInfo("","","","","","","","","",""));
+        arrayList.add(new liveOrdersInfo("","","","","","","","","",""));
+        arrayList.add(new liveOrdersInfo("","","","","","","","","",""));
+        arrayList.add(new liveOrdersInfo("","","","","","","","","",""));
+        arrayList.add(new liveOrdersInfo("","","","","","","","","",""));
 
         listView = findViewById(R.id.listview);
         adapter = new CustomAdapter(arrayList);
@@ -84,6 +91,8 @@ public class LiveOrders extends AppCompatActivity {
                 r.getDisplayMetrics());
 
         layout = findViewById(R.id.layout);
+
+
 
         loveditsmall = findViewById(R.id.loveditsmall);
         greatsmall = findViewById(R.id.greatsmall);
@@ -108,6 +117,35 @@ public class LiveOrders extends AppCompatActivity {
         average = findViewById(R.id.average);
         bad= findViewById(R.id.bad);
         fuck = findViewById(R.id.fuck);
+
+        DisplayMetrics displaymetrics = new DisplayMetrics();
+        getWindowManager().getDefaultDisplay().getMetrics(displaymetrics);
+        mScreenHeight = displaymetrics.heightPixels;
+
+
+       if(layout.getHeight() == 0){
+        ValueAnimator slideAnimator = ValueAnimator.ofInt(0,mScreenHeight/4+55).setDuration(1300);
+        slideAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+            @Override
+            public void onAnimationUpdate(ValueAnimator animation) {
+
+
+                // get the value the interpolator is at
+                Integer value = (Integer) animation.getAnimatedValue();
+                // I'm going to set the layout's height 1:1 to the tick
+                layout.getLayoutParams().height = value.intValue();
+                // force all layouts to see which ones are affected by
+                // this layouts height change
+                layout.requestLayout();
+
+            }
+        });
+
+        AnimatorSet set = new AnimatorSet();
+        set.play(slideAnimator);
+        set.setInterpolator(new AccelerateDecelerateInterpolator());
+        set.start();}
+
 
 
 
@@ -515,6 +553,29 @@ public class LiveOrders extends AppCompatActivity {
             }
         });
 
+        feedback.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+                Drawable drawable = getResources().getDrawable(R.drawable.edit_layout_blue);
+                feedback.setBackground(drawable);
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+                Drawable drawable = getResources().getDrawable(R.drawable.edit_layout_blue);
+                feedback.setBackground(drawable);
+
+            }
+        });
+
 
 
 
@@ -526,7 +587,7 @@ public class LiveOrders extends AppCompatActivity {
 
 
 
-        ValueAnimator slideAnimator = ValueAnimator.ofInt(initialHt,finalHt).setDuration(1000);
+        ValueAnimator slideAnimator = ValueAnimator.ofInt(initialHt,finalHt).setDuration(500);
         slideAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
             @Override
             public void onAnimationUpdate(ValueAnimator animation) {
@@ -579,41 +640,34 @@ public class LiveOrders extends AppCompatActivity {
          public View getView(int position, View convertView, ViewGroup parent) {
 
 
-             convertView = getLayoutInflater().inflate(R.layout.current_order_row,null);
+
+
+             convertView = getLayoutInflater().inflate(R.layout.current_order_row_livorders,null);
+             RelativeLayout relativeLayout;
+             relativeLayout = convertView.findViewById(R.id.CurrentOrderRowRL);
+             if(position == 0)
+             {
+                 Resources r = getResources();
+                 int top = (int) TypedValue.applyDimension(
+                         TypedValue.COMPLEX_UNIT_DIP,
+                         30,
+                         r.getDisplayMetrics());
+                 int bottom = (int) TypedValue.applyDimension(
+                         TypedValue.COMPLEX_UNIT_DIP,
+                         10,
+                         r.getDisplayMetrics());
+                 int horizontal = (int) TypedValue.applyDimension(
+                         TypedValue.COMPLEX_UNIT_DIP,
+                         8,
+                         r.getDisplayMetrics());
+                  RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT, RelativeLayout.LayoutParams.WRAP_CONTENT);
+                  params.setMargins(horizontal,top,horizontal,bottom);
+                  relativeLayout.setLayoutParams(params);
+             }
 
              DisplayMetrics displaymetrics = new DisplayMetrics();
              getWindowManager().getDefaultDisplay().getMetrics(displaymetrics);
              mScreenHeight = displaymetrics.heightPixels;
-
-             convertView.setOnClickListener(new View.OnClickListener() {
-                 @Override
-                 public void onClick(View v) {
-
-
-
-                     ValueAnimator slideAnimator = ValueAnimator.ofInt(0,mScreenHeight/3-100).setDuration(1000);
-                     slideAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
-                         @Override
-                         public void onAnimationUpdate(ValueAnimator animation) {
-
-
-                             // get the value the interpolator is at
-                             Integer value = (Integer) animation.getAnimatedValue();
-                             // I'm going to set the layout's height 1:1 to the tick
-                             layout.getLayoutParams().height = value.intValue();
-                             // force all layouts to see which ones are affected by
-                             // this layouts height change
-                             layout.requestLayout();
-
-                         }
-                     });
-
-                     AnimatorSet set = new AnimatorSet();
-                     set.play(slideAnimator);
-                     set.setInterpolator(new AccelerateDecelerateInterpolator());
-                     set.start();
-                 }
-             });
 
 
 

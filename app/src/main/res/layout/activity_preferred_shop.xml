@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
+    android:background="#F2F4F4"
     tools:context=".PreferredShop">
 
     <RelativeLayout
@@ -107,6 +108,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/view6"
+            android:layout_marginTop="-10dp"
             android:id="@+id/ShopsListView"
             android:divider="@android:color/transparent"/>
         
